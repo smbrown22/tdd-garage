@@ -14,13 +14,26 @@ garageTwo = {
 }
 
 def enter_garage(garage, car_id, entry_hour):
-    pass 
+    if car_id in garage.get("cars"):
+        raise ValueError
+    elif len(garage) == garage.get("capacity"):
+        raise ValueError 
+    elif entry_hour not isinstance(int):
+        raise TypeError
+    else:
+        garage.get("capacity") =- 1
+        
 
 def exit_garage(garage, car_id):
-    pass
+    pass 
 
 def get_available_spots(garage):
     pass 
 
 def calculate_fee(hours, rate):
-    pass 
+    if hours < 0 or rate < 0:
+        raise ValueError
+    elif not isinstance(hours , (int, float)) or not isinstance(rate, (int, float)):
+        raise TypeError
+    else:
+        return hours * rate 
