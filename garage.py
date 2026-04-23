@@ -4,12 +4,12 @@ garage = {
 }
 
 garageOne = {
-    "capacity": 5,   # total number of spots
+    "capacity": 10,   # total number of spots
     "cars": {"40000" : 9 , "40001" : 9, "40002" : 9 , "40003" : 9 , "40004" : 9}         # car_id -> entry_hour (int)
 }
 
 garageTwo = {
-    "capacity": 7,   # total number of spots
+    "capacity": 10,   # total number of spots
     "cars": {"40000" : 9 , "40001" : 9, "40002" : 9}         # car_id -> entry_hour (int)
 }
 
@@ -28,7 +28,7 @@ def exit_garage(garage, car_id):
     pass 
 
 def get_available_spots(garage):
-    return garage.get("capacity")  
+    return garage.get("capacity") - len(garage)
 
 def calculate_fee(hours, rate):
     if hours < 0 or rate < 0:
@@ -36,4 +36,4 @@ def calculate_fee(hours, rate):
     elif not isinstance(hours , (int, float)) or not isinstance(rate, (int, float)):
         raise TypeError
     else:
-        return hours * rate 
+        return round(hours * rate, 2) 
