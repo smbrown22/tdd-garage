@@ -33,13 +33,13 @@ def test_calculate_fee_valid():
     assert calculate_fee(5, 10.0) == 50.0
 
 def test_calculate_fee_invalid_hours():
-    with pytest.raises("ValueError"):
+    with pytest.raises(ValueError):
         calculate_fee(-5, 10.0)
 
 def test_calculate_fee_invalid_rate():
-    with pytest.raises("ValueError"):
+    with pytest.raises(ValueError):
         calculate_fee(5, -10.0)
 
 def test_calculate_fee_invalid_type():
-    with pytest.raises("TypeError"):
+    with pytest.raises(TypeError):
         calculate_fee(5, '10.0')
