@@ -13,4 +13,6 @@ def test_enter_garage_car_exists():
     with pytest.raises(ValueError):
         enter_garage(garage, "12345", 8)
 
-def 
+def test_enter_garage_entry_hour_type():
+    with pytest.raises(TypeError):
+        enter_garage(garage, "23456", "8")
