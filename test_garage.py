@@ -1,5 +1,5 @@
 import pytest
-from garage import garage, enter_garage 
+from garage import garage, enter_garage, exit_garage, get_available_spots,  
 
 def test_enter_garage_successful_add():
     enter_garage(garage, "12345", 8) 
@@ -24,4 +24,8 @@ def test_exit_garage_successful_add():
 def test_exit_garage_doesnt_exist():
     with pytest.raises(KeyError):
         exit_garage(garage, "30000", 9)
+
+@pytest.mark.parametrize("garage, expected", [(garage, 7), (garageOne, 5), (garageTwo, 0)])
+def test_available_spots(garage, expected):
+    assert get_available_spots(score) == expected
 
