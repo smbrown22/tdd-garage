@@ -18,12 +18,12 @@ def test_enter_garage_entry_hour_type():
         enter_garage(garage, "23456", "8")
 
 def test_exit_garage_successful_add():
-    exit_garage(garage, "40000", 10) 
+    exit_garage(garage, "40000") 
     assert "40000" not in garage
 
 def test_exit_garage_doesnt_exist():
     with pytest.raises(KeyError):
-        exit_garage(garage, "30000", 9)
+        exit_garage(garage, "30000")
 
 @pytest.mark.parametrize("garage, expected", [(garage, 7), (garageOne, 5), (garageTwo, 0)])
 def test_available_spots(garage, expected):
