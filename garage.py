@@ -9,7 +9,7 @@ garageOne = {
 }
 
 garageTwo = {
-    "capacity": 10,   # total number of spots
+    "capacity": 3,   # total number of spots
     "cars": {"40000" : 9 , "40001" : 9, "40002" : 9}         # car_id -> entry_hour (int)
 }
 
