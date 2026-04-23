@@ -1,5 +1,5 @@
 import pytest
-from garage import garage, enter_garage, exit_garage, get_available_spots, calculate_fee
+from garage import garage, garageOne, garageTwo, enter_garage, exit_garage, get_available_spots, calculate_fee
 
 def test_enter_garage_successful_add():
     enter_garage(garage, "12345", 8) 
