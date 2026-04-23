@@ -27,7 +27,7 @@ def test_exit_garage_doesnt_exist():
 
 @pytest.mark.parametrize("garage, expected", [(garage, 7), (garageOne, 5), (garageTwo, 0)])
 def test_available_spots(garage, expected):
-    assert get_available_spots(score) == expected
+    assert get_available_spots(garage) == expected
 
 def test_calculate_fee_valid():
     assert calculate_fee(5, 10.0) == 50.0
