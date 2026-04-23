@@ -21,7 +21,7 @@ def enter_garage(garage, car_id, entry_hour):
     elif not isinstance(entry_hour, int):
         raise TypeError
     else:
-        garage.get("capacity") = garage.get("capacity") - 1 
+        garage.get("capacity") == garage.get("capacity") - 1 
         
 
 def exit_garage(garage, car_id):
