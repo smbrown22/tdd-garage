@@ -26,7 +26,7 @@ def test_exit_garage_successful_remove():
     "capacity": 10,   # total number of spots
     "cars": {"40000" : 9}         # car_id -> entry_hour (int)
     }
-    exit_garage(garage, "40000") 
+    exit_garage(garageDemo, "40000") 
     assert "40000" not in garage 
 
 def test_exit_garage_doesnt_exist():
