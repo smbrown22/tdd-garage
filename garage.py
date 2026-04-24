@@ -16,12 +16,12 @@ garageTwo = {
 def enter_garage(garage, car_id, entry_hour):
     if car_id in garage.get("cars"):
         raise ValueError
-    elif len(garage) == garage.get("capacity"):
+    elif len(garage.get("cars")) == garage.get("capacity"):
         raise ValueError 
     elif not isinstance(entry_hour, int):
         raise TypeError
     else:
-        garage[car_id] = entry_hour 
+        garage.get(cars[car_id] = entry_hour )
         
 
 def exit_garage(garage, car_id):
