@@ -7,7 +7,7 @@ def test_enter_garage_successful_add():
 
 def test_enter_garage_full_capacity():
     with pytest.raises(ValueError):
-        enter_garage(garage, "54321", 10)
+        enter_garage(garageTwo, "54321", 10)
 
 def test_enter_garage_car_exists():
     with pytest.raises(ValueError):
