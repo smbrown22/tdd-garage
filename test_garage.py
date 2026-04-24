@@ -21,9 +21,13 @@ def test_enter_garage_entry_hour_type():
     with pytest.raises(TypeError):
         enter_garage(garage, "23456", "8")
 
-def test_exit_garage_successful_add():
+def test_exit_garage_successful_remove():
+    garageDemo = {
+    "capacity": 10,   # total number of spots
+    "cars": {"40000" : 9}         # car_id -> entry_hour (int)
+    }
     exit_garage(garage, "40000") 
-    assert "40000" not in garage
+    assert "40000" not in garage 
 
 def test_exit_garage_doesnt_exist():
     with pytest.raises(KeyError):
