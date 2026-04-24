@@ -15,7 +15,7 @@ def test_enter_garage_full_capacity():
 
 def test_enter_garage_car_exists():
     with pytest.raises(ValueError):
-        enter_garage(garage, "12345", 8)
+        enter_garage(garage, "40000", 8)
 
 def test_enter_garage_entry_hour_type():
     with pytest.raises(TypeError):
